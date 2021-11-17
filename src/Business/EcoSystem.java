@@ -8,6 +8,7 @@ package Business;
 
 import Business.Customer.CustomerDirectory;
 import Business.DeliveryMan.DeliveryManDirectory;
+import Business.Enterprise.EnterpriseDirectory;
 import Business.Restaurant.RestaurantDirectory;
 import Business.Role.Role;
 import Business.Role.SystemAdminRole;
@@ -20,6 +21,7 @@ import java.util.ArrayList;
 public class EcoSystem extends Organization{
     
     private static EcoSystem business;
+    private EnterpriseDirectory enterpriseDirectory;
     private RestaurantDirectory restaurantDirectory;
     private CustomerDirectory customerDirectory;
     private DeliveryManDirectory deliveryManDirectory;
@@ -46,12 +48,55 @@ public class EcoSystem extends Organization{
     }
     private EcoSystem(){
         super(null);
+        enterpriseDirectory=new EnterpriseDirectory();
         restaurantDirectory = new RestaurantDirectory();
         customerDirectory = new CustomerDirectory();
         deliveryManDirectory = new DeliveryManDirectory();
        // networkList=new ArrayList<Network>();
     }
 
+//    public OrderDirectory getOrderDirectory() {
+//        return orderDirectory;
+//    }
+//
+//    public void setOrderDirectory(OrderDirectory orderDirectory) {
+//        this.orderDirectory = orderDirectory;
+//    }
+
+    public static EcoSystem getBusiness() {
+        return business;
+    }
+
+    public CustomerDirectory getCustomerDirectory() {
+        return customerDirectory;
+    }
+
+    public void setCustomerDirectory(CustomerDirectory customerDirectory) {
+        this.customerDirectory = customerDirectory;
+    }
+
+    public DeliveryManDirectory getDeliveryManDirectory() {
+        return deliveryManDirectory;
+    }
+
+    public void setDeliveryManDirectory(DeliveryManDirectory deliveryManDirectory) {
+        this.deliveryManDirectory = deliveryManDirectory;
+    }
+
+    public static void setBusiness(EcoSystem business) {
+        EcoSystem.business = business;
+    }
+
+    public EnterpriseDirectory getEnterpriseDirectory() {
+        return enterpriseDirectory;
+    }
+
+    public void setEnterpriseDirectory(EnterpriseDirectory enterpriseDirectory) {
+        this.enterpriseDirectory = enterpriseDirectory;
+    }
+    
+    
+    
     
     public boolean checkIfUserIsUnique(String userName){
        //
