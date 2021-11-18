@@ -52,6 +52,14 @@ public abstract class Enterprise extends Organization {
         return value;
     }
     }
+    public RestaurantDirectory getRestaurantDirectory() {
+        return restaurantDirectory;
+    }
+    
+    public void setRestaurantDirectory(RestaurantDirectory restaurantDirectory) {
+        this.restaurantDirectory = restaurantDirectory;
+    }
+    
     public Items createMenuItem(){
         Items item = new Items(); 
         this.itemsList.add(item);

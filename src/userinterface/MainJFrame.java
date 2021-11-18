@@ -6,6 +6,7 @@ package userinterface;
 
 import Business.EcoSystem;
 import Business.DB4OUtil.DB4OUtil;
+import Business.Enterprise.Enterprise;
 
 import Business.Organization;
 import Business.Role.Role;
@@ -125,26 +126,93 @@ public class MainJFrame extends javax.swing.JFrame {
 
     private void loginJButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_loginJButtonActionPerformed
         // Get user name
-        String strPassword = String.valueOf(passwordField.getPassword());
-        UserAccount loginAcc = system.getUserAccountDirectory().authenticateUser(userNameJTextField.getText(), strPassword);
-        Role loginRole = loginAcc.getRole();
-        
-        container.removeAll();
-        JPanel jpanel = loginRole.createWorkArea(container, loginAcc, system);
-        container.add("workPanel", jpanel);
-        CardLayout crdLyt = (CardLayout) container.getLayout();
-        crdLyt.next(container);
-        
-//        if(loginRole.toString() == "SystemAdminRole")
-//        {
-//        JPanel jPanel = new JPanel();
-//        SystemAdminWorkAreaJPanel systemAdminWorkAreaJPanel = new SystemAdminWorkAreaJPanel(jPanel,system);
-//        container.add("sysAdminPanel", systemAdminWorkAreaJPanel);
+//        String strPassword = String.valueOf(passwordField.getPassword());
+//        UserAccount loginAcc = system.getUserAccountDirectory().authenticateUser(userNameJTextField.getText(), strPassword);
+//        Role loginRole = loginAcc.getRole();
+//        
+//        container.removeAll();
+//        JPanel jpanel = loginRole.createWorkArea(container, loginAcc, system);
+//        container.add("workPanel", jpanel);
 //        CardLayout crdLyt = (CardLayout) container.getLayout();
 //        crdLyt.next(container);
-//        logoutJButton.setEnabled(true);
+        String userName = userNameJTextField.getText();
+        char[] passwordCharArray = passwordField.getPassword();
+        String password = String.valueOf(passwordCharArray);
+        UserAccount userAccount=system.getUserAccountDirectory().authenticateUser(userName, password);
+        
+        Enterprise inEnterprise=null;
+        Organization inOrganization=null;
+        
+        if(userAccount==null){
+            //Step 2: Go inside each network and check each enterprise
+           // for(Network network:system.getNetworkList()){
+                //Step 2.a: check against each enterprise
+                for(Enterprise enterprise:system.getEnterpriseDirectory().getEnterpriseList())
+                {
+                    //userAccount=enterprise.getUserAccountDirectory().authenticateUser(userName, password);
+                    if(userAccount==null)
+                    {
+                       //Step 3:check against each organization for each enterprise
+                       for(Organization organization:enterprise.getRestaurantDirectory().getOrganizationList())
+                       {
+                           userAccount=organization.getUserAccountDirectory().authenticateUser(userName, password);
+                           if(userAccount!=null)
+                           {
+                               inEnterprise=enterprise;
+                               inOrganization=organization;
+                               break;
+                           }
+                       }
+                    }
+                    
+                    else{
+                       inEnterprise=enterprise;
+                       break;
+                    }
+                    if(inOrganization!=null){
+                        break;
+                    }  
+                }
+        }
+        
+//        if(userAccount==null){
+//           for(Organization organization:system.getCustomerDirectory().getOrganizationList())
+//                       {
+//                           userAccount=organization.getUserAccountDirectory().authenticateUser(userName, password);
+//                           if(userAccount!=null)
+//                           {
+//                               inOrganization=organization;
+//                               break;
+//                           }
+//                       }
+//        }
+//        
+//        if(userAccount==null){
+//           for(Organization organization:system.getDeliveryManDirectory().getOrganizationList())
+//                       {
+//                           userAccount=organization.getUserAccountDirectory().authenticateUser(userName, password);
+//                           if(userAccount!=null)
+//                           {
+//                               inOrganization=organization;
+//                               break;
+//                           }
+//                       }
 //        }
         
+        if(userAccount==null){
+            JOptionPane.showMessageDialog(null, "Invalid credentials");
+            return;
+        }
+        else{
+            CardLayout layout=(CardLayout)container.getLayout();
+            container.add("workArea",userAccount.getRole().createWorkArea(container, userAccount, inOrganization, inEnterprise, system));
+            layout.next(container);
+        }
+        
+        loginJButton.setEnabled(false);
+        logoutJButton.setEnabled(true);
+        userNameJTextField.setEnabled(false);
+        passwordField.setEnabled(false);
         
        
     }//GEN-LAST:event_loginJButtonActionPerformed
