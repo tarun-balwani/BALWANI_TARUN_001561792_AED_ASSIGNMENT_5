@@ -45,20 +45,19 @@
                   <Group type="102" attributes="0">
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Group type="103" alignment="0" groupAlignment="1" max="-2" attributes="0">
-                              <Component id="passwordField" pref="118" max="32767" attributes="0"/>
-                              <Component id="jLabel1" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="jLabel2" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="userNameJTextField" alignment="0" max="32767" attributes="0"/>
-                              <Group type="102" alignment="0" attributes="0">
-                                  <Component id="logoutJButton" pref="92" max="32767" attributes="0"/>
-                                  <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
-                                  <Component id="loginJLabel" min="-2" max="-2" attributes="0"/>
-                              </Group>
+                          <Component id="jLabel1" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="jLabel2" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="userNameJTextField" linkSize="1" alignment="0" max="32767" attributes="0"/>
+                          <Group type="102" alignment="0" attributes="0">
+                              <Component id="logoutJButton" linkSize="1" pref="92" max="32767" attributes="0"/>
+                              <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
+                              <Component id="loginJLabel" min="-2" max="-2" attributes="0"/>
                           </Group>
-                          <Component id="loginJButton" alignment="0" min="-2" pref="100" max="-2" attributes="0"/>
+                          <Component id="loginJButton" linkSize="1" alignment="0" min="-2" pref="100" max="-2" attributes="0"/>
+                          <Component id="passwordField" linkSize="1" alignment="0" pref="118" max="32767" attributes="0"/>
+                          <Component id="jButtonCustomerSignUp" alignment="0" min="-2" pref="107" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace max="32767" attributes="0"/>
+                      <EmptySpace pref="45" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -79,7 +78,9 @@
                       <Component id="logoutJButton" min="-2" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
                       <Component id="loginJLabel" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace pref="187" max="32767" attributes="0"/>
+                      <EmptySpace pref="137" max="32767" attributes="0"/>
+                      <Component id="jButtonCustomerSignUp" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -116,6 +117,14 @@
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="logoutJButtonActionPerformed"/>
+              </Events>
+            </Component>
+            <Component class="javax.swing.JButton" name="jButtonCustomerSignUp">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Customer Sign Up"/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButtonCustomerSignUpActionPerformed"/>
               </Events>
             </Component>
           </SubComponents>
