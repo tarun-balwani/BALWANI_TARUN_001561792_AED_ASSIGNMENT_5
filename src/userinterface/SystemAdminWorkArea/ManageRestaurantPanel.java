@@ -5,17 +5,41 @@
  */
 package userinterface.SystemAdminWorkArea;
 
+import Business.EcoSystem;
+import Business.Enterprise.Enterprise;
+import Business.Organization;
+import Business.UserAccount.UserAccount;
+import java.awt.CardLayout;
+import java.awt.Component;
+import javax.swing.JOptionPane;
+import javax.swing.JPanel;
+import javax.swing.table.DefaultTableModel;
+
 /**
  *
  * @author tarunbalwani
  */
 public class ManageRestaurantPanel extends javax.swing.JPanel {
+    JPanel userProcessContainer;
+    EcoSystem ecosystem;
+    Enterprise restEnterprise;
+    Enterprise enterprise; 
+    Organization organization;
 
     /**
      * Creates new form ManageRestaurantPanel
      */
-    public ManageRestaurantPanel() {
+    public ManageRestaurantPanel(JPanel userProcessContainer,EcoSystem ecosystem) {
+        
         initComponents();
+        this.userProcessContainer=userProcessContainer;
+        this.ecosystem=ecosystem;
+        populateTable();
+        if(enterprise!=null &&organization!=null ){
+       this.enterprise = ecosystem.getEnterpriseDirectory().searchEnterprise(txtRestSearch.getText());
+        this.organization=enterprise.getRestaurantDirectory().searchOrganization("RestaurantAdmin") ;
+        }
+        
     }
 
     /**
@@ -30,15 +54,23 @@ public class ManageRestaurantPanel extends javax.swing.JPanel {
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
-        jTable1 = new javax.swing.JTable();
+        jTableRestaurant = new javax.swing.JTable();
         jButtonCreateRestaurant = new javax.swing.JButton();
         jButtonDeleteRestaurant = new javax.swing.JButton();
+        jButtonBack = new javax.swing.JButton();
+        jLabel3 = new javax.swing.JLabel();
+        txtRestSearch = new javax.swing.JTextField();
+        jButton1 = new javax.swing.JButton();
+        jLabel4 = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
+        lblManName = new javax.swing.JLabel();
+        lblManUserId = new javax.swing.JLabel();
 
         jLabel1.setText("Manage Restaurants");
 
         jLabel2.setText("Restaurants");
 
-        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+        jTableRestaurant.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null},
                 {null, null, null},
@@ -49,58 +81,208 @@ public class ManageRestaurantPanel extends javax.swing.JPanel {
                 "Name", "Address", "XYZ"
             }
         ));
-        jScrollPane1.setViewportView(jTable1);
+        jScrollPane1.setViewportView(jTableRestaurant);
 
         jButtonCreateRestaurant.setText("Create Restaurant");
+        jButtonCreateRestaurant.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonCreateRestaurantActionPerformed(evt);
+            }
+        });
 
         jButtonDeleteRestaurant.setText("Delete Restaurant");
+        jButtonDeleteRestaurant.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonDeleteRestaurantActionPerformed(evt);
+            }
+        });
+
+        jButtonBack.setText("BACK");
+        jButtonBack.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonBackActionPerformed(evt);
+            }
+        });
+
+        jLabel3.setText("Restaurant Name");
+
+        jButton1.setText("Get Details");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+
+        jLabel4.setText("Manager Name");
+
+        jLabel5.setText("Manager User ID");
+
+        lblManName.setText("jLabel6");
+
+        lblManUserId.setText("jLabel7");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jLabel1)
-                .addGap(322, 322, 322))
             .addGroup(layout.createSequentialGroup()
-                .addGap(63, 63, 63)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel2)
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 434, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(43, 43, 43)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(jButtonCreateRestaurant)
-                            .addComponent(jButtonDeleteRestaurant))))
+                        .addGap(63, 63, 63)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel2)
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 434, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(43, 43, 43)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addComponent(jButtonCreateRestaurant)
+                                    .addComponent(jButtonDeleteRestaurant)))
+                            .addGroup(layout.createSequentialGroup()
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(jLabel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(jLabel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(jLabel5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                .addGap(36, 36, 36)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(lblManUserId)
+                                    .addComponent(lblManName)
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addComponent(txtRestSearch, javax.swing.GroupLayout.PREFERRED_SIZE, 94, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGap(18, 18, 18)
+                                        .addComponent(jButton1))))))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(40, 40, 40)
+                        .addComponent(jButtonBack)
+                        .addGap(145, 145, 145)
+                        .addComponent(jLabel1)))
                 .addContainerGap(55, Short.MAX_VALUE))
         );
+
+        layout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {jLabel3, txtRestSearch});
+
+        layout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {lblManName, lblManUserId});
+
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGap(21, 21, 21)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jButtonBack))
+                .addGap(44, 44, 44)
                 .addComponent(jLabel2)
-                .addGap(18, 18, 18)
+                .addGap(38, 38, 38)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 124, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(20, 20, 20)
                         .addComponent(jButtonCreateRestaurant)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jButtonDeleteRestaurant)))
-                .addContainerGap(341, Short.MAX_VALUE))
+                        .addComponent(jButtonDeleteRestaurant))
+                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 124, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(22, 22, 22)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel3)
+                    .addComponent(txtRestSearch, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jButton1))
+                .addGap(36, 36, 36)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel4)
+                    .addComponent(lblManName))
+                .addGap(39, 39, 39)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel5)
+                    .addComponent(lblManUserId))
+                .addContainerGap(116, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
+    private void jButtonDeleteRestaurantActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonDeleteRestaurantActionPerformed
+                // TODO add your handling code here:
+                   int selectedRow = jTableRestaurant.getSelectedRow();
+        if (selectedRow < 0) {
+            JOptionPane.showMessageDialog(null, "Please select a row");
+            return;
+        }
+        else{
+            Enterprise e = (Enterprise)jTableRestaurant.getValueAt(selectedRow, 2);
+            ecosystem.getEnterpriseDirectory().deleteEnterprise(e);
+        JOptionPane.showMessageDialog(null, "Restaurant deleted successfully");
+        populateTable();
+    } 
+    }//GEN-LAST:event_jButtonDeleteRestaurantActionPerformed
+
+    private void jButtonCreateRestaurantActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonCreateRestaurantActionPerformed
+        // TODO add your handling code here:
+        AddNewRestaurantPanel panel = new AddNewRestaurantPanel(userProcessContainer,ecosystem);
+        userProcessContainer.add("AddNewRestaurant", panel);
+        CardLayout layout = (CardLayout) userProcessContainer.getLayout();
+        layout.next(userProcessContainer);
+    }//GEN-LAST:event_jButtonCreateRestaurantActionPerformed
+
+    private void jButtonBackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonBackActionPerformed
+        // TODO add your handling code here:
+        userProcessContainer.remove(this);
+        CardLayout layout = (CardLayout) userProcessContainer.getLayout();
+        layout.previous(userProcessContainer);
+        
+        Component[] comps = this.userProcessContainer.getComponents();
+        for(Component comp : comps){
+            if(comp instanceof SystemAdminWorkAreaJPanel){
+                SystemAdminWorkAreaJPanel systemAdminWorkAreaJPanel= (SystemAdminWorkAreaJPanel) comp;
+               systemAdminWorkAreaJPanel.populateTree(); 
+            }
+        }
+    }//GEN-LAST:event_jButtonBackActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        // TODO add your handling code here:
+        Enterprise result = ecosystem.getEnterpriseDirectory().searchEnterprise(txtRestSearch.getText());
+        Organization organization1=result.getRestaurantDirectory().searchOrganization("RestaurantAdmin") ;
+        if (result == null) {
+            JOptionPane.showMessageDialog(null, "Restaurant entered does not exist","Information",JOptionPane.INFORMATION_MESSAGE);
+            
+        }
+        else{
+            for(UserAccount userAccount:organization1.getUserAccountDirectory().getUserAccountList()) 
+  {
+            //Object row[] = new Object[3];
+            //row[0] = result.getName();
+            lblManName.setText(userAccount.getEmployee().getName());
+            
+            lblManUserId.setText(userAccount.getUsername());
+           
+            
+  }
+        }
+    }//GEN-LAST:event_jButton1ActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButtonBack;
     private javax.swing.JButton jButtonCreateRestaurant;
     private javax.swing.JButton jButtonDeleteRestaurant;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTable jTable1;
+    private javax.swing.JTable jTableRestaurant;
+    private javax.swing.JLabel lblManName;
+    private javax.swing.JLabel lblManUserId;
+    private javax.swing.JTextField txtRestSearch;
     // End of variables declaration//GEN-END:variables
+
+    public void populateTable() {
+        DefaultTableModel dtm = (DefaultTableModel) jTableRestaurant.getModel();
+        dtm.setRowCount(0);
+        for(Enterprise enterprise:ecosystem.getEnterpriseDirectory().getEnterpriseList()) {
+            Object row[] = new Object[3];
+            row[0] = enterprise.getName();
+            row[1] = enterprise.getAddress();
+            row[2] = enterprise;
+            
+            dtm.addRow(row);
+        }
+    }
 }
