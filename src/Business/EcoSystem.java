@@ -25,6 +25,8 @@ public class EcoSystem extends Organization{
     private RestaurantDirectory restaurantDirectory;
     private CustomerDirectory customerDirectory;
     private DeliveryManDirectory deliveryManDirectory;
+    private OrderDirectory orderDirectory;
+
 
     public EcoSystem(RestaurantDirectory restaurantDirectory, CustomerDirectory customerDirectory, DeliveryManDirectory deliveryManDirectory) {
 
@@ -52,16 +54,17 @@ public class EcoSystem extends Organization{
         restaurantDirectory = new RestaurantDirectory();
         customerDirectory = new CustomerDirectory();
         deliveryManDirectory = new DeliveryManDirectory();
+        orderDirectory=new OrderDirectory();
        // networkList=new ArrayList<Network>();
     }
 
-//    public OrderDirectory getOrderDirectory() {
-//        return orderDirectory;
-//    }
-//
-//    public void setOrderDirectory(OrderDirectory orderDirectory) {
-//        this.orderDirectory = orderDirectory;
-//    }
+    public OrderDirectory getOrderDirectory() {
+        return orderDirectory;
+    }
+
+    public void setOrderDirectory(OrderDirectory orderDirectory) {
+        this.orderDirectory = orderDirectory;
+    }
 
     public static EcoSystem getBusiness() {
         return business;
@@ -94,6 +97,7 @@ public class EcoSystem extends Organization{
     public void setEnterpriseDirectory(EnterpriseDirectory enterpriseDirectory) {
         this.enterpriseDirectory = enterpriseDirectory;
     }
+    
     
     
     

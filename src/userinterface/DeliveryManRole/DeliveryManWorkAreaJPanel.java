@@ -5,6 +5,8 @@
 package userinterface.DeliveryManRole;
 
 import Business.EcoSystem;
+import Business.Enterprise.Enterprise;
+import Business.Organization;
 
 import Business.UserAccount.UserAccount;
 import Business.WorkQueue.WorkRequest;
@@ -26,7 +28,8 @@ public class DeliveryManWorkAreaJPanel extends javax.swing.JPanel {
     /**
      * Creates new form LabAssistantWorkAreaJPanel
      */
-    public DeliveryManWorkAreaJPanel(JPanel userProcessContainer, UserAccount account, EcoSystem business) {
+    public DeliveryManWorkAreaJPanel(JPanel userProcessContainer, UserAccount account,Organization organization, 
+            Enterprise enterprise, EcoSystem business) {
         initComponents();
         
         this.userProcessContainer = userProcessContainer;

@@ -139,7 +139,7 @@ public class ManageDeliveryMen extends javax.swing.JPanel {
     private void btnAddDelManActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAddDelManActionPerformed
         // TODO add your handling code here:
         NewDeliveryManPanel panel = new NewDeliveryManPanel(userProcessContainer,ecosystem,deliverManOrg);
-        userProcessContainer.add("CreateNewDeliveryManJPanel", panel);
+        userProcessContainer.add("CreateNewDeliveryMan", panel);
         CardLayout layout = (CardLayout) userProcessContainer.getLayout();
         layout.next(userProcessContainer);
     }//GEN-LAST:event_btnAddDelManActionPerformed
@@ -188,7 +188,8 @@ public class ManageDeliveryMen extends javax.swing.JPanel {
     public void populateTable() {
         DefaultTableModel dtm = (DefaultTableModel) tblDelMenList.getModel();
         dtm.setRowCount(0);
-      Organization organization1=ecosystem.getDeliveryManDirectory().searchOrganization("DeliveryMan") ;
+      Organization organization1=ecosystem.getDeliveryManDirectory().searchOrganization("Delivery") ;
+      if(organization1!= null)
         for(UserAccount ua:organization1.getUserAccountDirectory().getUserAccountList()) {
             Object row[] = new Object[3];
             row[0] = ua.getEmployee().getName();

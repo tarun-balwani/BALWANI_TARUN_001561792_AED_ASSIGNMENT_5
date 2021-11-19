@@ -31,18 +31,18 @@ public class SystemAdminWorkAreaJPanel extends javax.swing.JPanel {
         initComponents();
         this.userProcessContainer=userProcessContainer;
         this.ecosystem=ecosystem;
-        Organization delivOrg= (Organization)ecosystem.getDeliveryManDirectory().searchOrganization("DeliveryMan");
+        Organization delivOrg= (Organization)this.ecosystem.getDeliveryManDirectory().searchOrganization("DeliveryMan");
        
-       Organization custOrg= (Organization)ecosystem.getCustomerDirectory().searchOrganization("Customer");
+       Organization custOrg= (Organization)this.ecosystem.getCustomerDirectory().searchOrganization("Customer");
        
         if(delivOrg==null){
-        this.deliverManOrg=(Organization)ecosystem.getDeliveryManDirectory().createOrganization(Organization.Type.DeliveryMan);
+        this.deliverManOrg=(Organization)this.ecosystem.getDeliveryManDirectory().createOrganization(Organization.Type.DeliveryMan);
         }
         else {
             this.deliverManOrg=delivOrg;
         }
         if(custOrg==null){
-        this.customerOrg=(Organization)ecosystem.getCustomerDirectory().createOrganization(Organization.Type.Customer);
+        this.customerOrg=(Organization)this.ecosystem.getCustomerDirectory().createOrganization(Organization.Type.Customer);
         }
         else{
             this.customerOrg=custOrg;
@@ -182,7 +182,10 @@ public class SystemAdminWorkAreaJPanel extends javax.swing.JPanel {
     }//GEN-LAST:event_btnManageEnterpriseActionPerformed
 
     private void btnManageAdminActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnManageAdminActionPerformed
-       
+       ManageDeliveryMen panel = new ManageDeliveryMen(userProcessContainer,ecosystem,deliverManOrg);
+        userProcessContainer.add("ManageDeliveryMen", panel);
+        CardLayout layout = (CardLayout) userProcessContainer.getLayout();
+        layout.next(userProcessContainer);   
     }//GEN-LAST:event_btnManageAdminActionPerformed
 
     private void jTreeValueChanged(javax.swing.event.TreeSelectionEvent evt) {//GEN-FIRST:event_jTreeValueChanged

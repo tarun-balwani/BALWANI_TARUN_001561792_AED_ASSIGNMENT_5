@@ -189,29 +189,29 @@ public class MainJFrame extends javax.swing.JFrame {
                 }
         }
         
-//        if(userAccount==null){
-//           for(Organization organization:system.getCustomerDirectory().getOrganizationList())
-//                       {
-//                           userAccount=organization.getUserAccountDirectory().authenticateUser(userName, password);
-//                           if(userAccount!=null)
-//                           {
-//                               inOrganization=organization;
-//                               break;
-//                           }
-//                       }
-//        }
-//        
-//        if(userAccount==null){
-//           for(Organization organization:system.getDeliveryManDirectory().getOrganizationList())
-//                       {
-//                           userAccount=organization.getUserAccountDirectory().authenticateUser(userName, password);
-//                           if(userAccount!=null)
-//                           {
-//                               inOrganization=organization;
-//                               break;
-//                           }
-//                       }
-//        }
+        if(userAccount==null){
+           for(Organization organization:system.getCustomerDirectory().getOrganizationList())
+                       {
+                           userAccount=organization.getUserAccountDirectory().authenticateUser(userName, password);
+                           if(userAccount!=null)
+                           {
+                               inOrganization=organization;
+                               break;
+                           }
+                       }
+        }
+        
+        if(userAccount==null){
+           for(Organization organization:system.getDeliveryManDirectory().getOrganizationList())
+                       {
+                           userAccount=organization.getUserAccountDirectory().authenticateUser(userName, password);
+                           if(userAccount!=null)
+                           {
+                               inOrganization=organization;
+                               break;
+                           }
+                       }
+        }
         
         if(userAccount==null){
             JOptionPane.showMessageDialog(null, "Invalid credentials");

@@ -53,6 +53,11 @@ public class ManagerCustomersPanel extends javax.swing.JPanel {
         jLabel1.setText("Customer Directory");
 
         jButton1.setText("BACK");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
 
         tblCustList.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -142,6 +147,21 @@ public class ManagerCustomersPanel extends javax.swing.JPanel {
         populateTable();
     } 
     }//GEN-LAST:event_jButton3ActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        // TODO add your handling code here:
+         userProcessContainer.remove(this);
+        CardLayout layout = (CardLayout) userProcessContainer.getLayout();
+        layout.previous(userProcessContainer);
+        
+        Component[] comps = this.userProcessContainer.getComponents();
+        for(Component comp : comps){
+            if(comp instanceof SystemAdminWorkAreaJPanel){
+                SystemAdminWorkAreaJPanel systemAdminWorkAreaJPanel= (SystemAdminWorkAreaJPanel) comp;
+               systemAdminWorkAreaJPanel.populateTree(); 
+            }
+        }
+    }//GEN-LAST:event_jButton1ActionPerformed
 
     public void populateTable() {
         DefaultTableModel dtm = (DefaultTableModel) tblCustList.getModel();

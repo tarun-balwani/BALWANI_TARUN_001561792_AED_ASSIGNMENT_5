@@ -204,7 +204,7 @@ public class NewDeliveryManPanel extends javax.swing.JPanel {
     // End of variables declaration//GEN-END:variables
 
     private boolean usernamePatternCorrect() {
-         Pattern p=Pattern.compile("^[a-zA-Z0-9]+_[a-zA-Z0-9]+@[a-zA-Z0-9]+.[a-zA-Z0-9]+$");
+         Pattern p=Pattern.compile("^[a-zA-Z0-9]+[a-zA-Z0-9]+@[a-zA-Z0-9]+.[a-zA-Z0-9]+$");
         Matcher m=p.matcher(txtDelManUserId.getText());
         boolean b=m.matches();
         return b;
