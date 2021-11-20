@@ -21,7 +21,10 @@ public class CustomerRole extends Role{
     
     public JPanel createWorkArea(JPanel userProcessContainer, UserAccount account,Organization organization, 
             Enterprise enterprise,  EcoSystem business) {
-        return new CustomerAreaJPanel(userProcessContainer, account);
+        return new CustomerAreaJPanel(userProcessContainer,account, 
+           organization, 
+           enterprise, 
+            business);
     }
     
     
