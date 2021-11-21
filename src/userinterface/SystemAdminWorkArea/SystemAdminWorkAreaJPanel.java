@@ -179,22 +179,23 @@ public class SystemAdminWorkAreaJPanel extends javax.swing.JPanel {
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addComponent(jScrollPane1)
-                .addContainerGap())
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 138, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 275, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 118, Short.MAX_VALUE))
+            .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 393, Short.MAX_VALUE)
         );
 
         jSplitPane.setLeftComponent(jPanel1);
 
+        jLabel1.setFont(new java.awt.Font("Lucida Grande", 1, 13)); // NOI18N
         jLabel1.setText("Selected Node:");
 
         lblSelectedNode.setText("<View_selected_node>");
 
+        btnManageNetwork.setBackground(new java.awt.Color(204, 255, 204));
+        btnManageNetwork.setFont(new java.awt.Font("Lucida Grande", 1, 13)); // NOI18N
         btnManageNetwork.setText("Manage All Customers");
         btnManageNetwork.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -202,6 +203,8 @@ public class SystemAdminWorkAreaJPanel extends javax.swing.JPanel {
             }
         });
 
+        btnManageEnterprise.setBackground(new java.awt.Color(204, 255, 204));
+        btnManageEnterprise.setFont(new java.awt.Font("Lucida Grande", 1, 13)); // NOI18N
         btnManageEnterprise.setText("Manage Restaurants");
         btnManageEnterprise.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -209,6 +212,8 @@ public class SystemAdminWorkAreaJPanel extends javax.swing.JPanel {
             }
         });
 
+        btnManageAdmin.setBackground(new java.awt.Color(204, 255, 204));
+        btnManageAdmin.setFont(new java.awt.Font("Lucida Grande", 1, 13)); // NOI18N
         btnManageAdmin.setText("Manage Deliveryman");
         btnManageAdmin.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -233,7 +238,7 @@ public class SystemAdminWorkAreaJPanel extends javax.swing.JPanel {
                             .addComponent(btnManageEnterprise, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(btnManageNetwork, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(btnManageAdmin, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
-                .addContainerGap(240, Short.MAX_VALUE))
+                .addContainerGap(211, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)

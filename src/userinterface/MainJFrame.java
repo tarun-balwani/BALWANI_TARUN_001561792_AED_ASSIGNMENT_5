@@ -58,6 +58,7 @@ public class MainJFrame extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
+        loginJButton.setBackground(new java.awt.Color(204, 255, 204));
         loginJButton.setText("Login");
         loginJButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -69,6 +70,7 @@ public class MainJFrame extends javax.swing.JFrame {
 
         jLabel2.setText("Password");
 
+        logoutJButton.setBackground(new java.awt.Color(204, 255, 204));
         logoutJButton.setText("Logout");
         logoutJButton.setEnabled(false);
         logoutJButton.addActionListener(new java.awt.event.ActionListener() {
@@ -77,7 +79,8 @@ public class MainJFrame extends javax.swing.JFrame {
             }
         });
 
-        jButtonCustomerSignUp.setText("Customer Sign Up");
+        jButtonCustomerSignUp.setBackground(new java.awt.Color(204, 255, 204));
+        jButtonCustomerSignUp.setText("Add Customer");
         jButtonCustomerSignUp.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButtonCustomerSignUpActionPerformed(evt);
@@ -101,7 +104,7 @@ public class MainJFrame extends javax.swing.JFrame {
                     .addComponent(loginJButton, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(passwordField, javax.swing.GroupLayout.DEFAULT_SIZE, 118, Short.MAX_VALUE)
                     .addComponent(jButtonCustomerSignUp, javax.swing.GroupLayout.PREFERRED_SIZE, 107, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(45, Short.MAX_VALUE))
+                .addContainerGap(44, Short.MAX_VALUE))
         );
 
         jPanel1Layout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {loginJButton, logoutJButton, passwordField, userNameJTextField});
@@ -123,8 +126,8 @@ public class MainJFrame extends javax.swing.JFrame {
                 .addComponent(logoutJButton)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(loginJLabel)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 137, Short.MAX_VALUE)
-                .addComponent(jButtonCustomerSignUp)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 113, Short.MAX_VALUE)
+                .addComponent(jButtonCustomerSignUp, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
         );
 

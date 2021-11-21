@@ -102,8 +102,11 @@ public class PlaceOrderPanel extends javax.swing.JPanel {
         ));
         jScrollPane1.setViewportView(meniTable);
 
+        jLabel1.setFont(new java.awt.Font("Lucida Grande", 1, 18)); // NOI18N
         jLabel1.setText("Place Your Order");
 
+        jButton1.setBackground(new java.awt.Color(204, 255, 204));
+        jButton1.setFont(new java.awt.Font("Lucida Grande", 3, 13)); // NOI18N
         jButton1.setText("BACK");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -111,6 +114,8 @@ public class PlaceOrderPanel extends javax.swing.JPanel {
             }
         });
 
+        btnPlaceOrder.setBackground(new java.awt.Color(204, 255, 204));
+        btnPlaceOrder.setFont(new java.awt.Font("Lucida Grande", 1, 13)); // NOI18N
         btnPlaceOrder.setText("Confirm Order");
         btnPlaceOrder.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -118,6 +123,8 @@ public class PlaceOrderPanel extends javax.swing.JPanel {
             }
         });
 
+        btnAddtoCart.setBackground(new java.awt.Color(204, 255, 204));
+        btnAddtoCart.setFont(new java.awt.Font("Lucida Grande", 1, 13)); // NOI18N
         btnAddtoCart.setText("Add to Cart");
         btnAddtoCart.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -125,6 +132,8 @@ public class PlaceOrderPanel extends javax.swing.JPanel {
             }
         });
 
+        jButton4.setBackground(new java.awt.Color(204, 255, 204));
+        jButton4.setFont(new java.awt.Font("Lucida Grande", 1, 13)); // NOI18N
         jButton4.setText("Delete From Cart");
         jButton4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -132,11 +141,14 @@ public class PlaceOrderPanel extends javax.swing.JPanel {
             }
         });
 
+        jLabel2.setFont(new java.awt.Font("Lucida Grande", 1, 12)); // NOI18N
         jLabel2.setText("Restaurant:");
 
         RestComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
         RestComboBox.setSelectedItem("");
 
+        jButton5.setBackground(new java.awt.Color(204, 255, 204));
+        jButton5.setFont(new java.awt.Font("Lucida Grande", 1, 13)); // NOI18N
         jButton5.setText("Get Menu");
         jButton5.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -144,6 +156,7 @@ public class PlaceOrderPanel extends javax.swing.JPanel {
             }
         });
 
+        jLabel3.setFont(new java.awt.Font("Lucida Grande", 1, 12)); // NOI18N
         jLabel3.setText("Order Details");
 
         tblCart.setModel(new javax.swing.table.DefaultTableModel(
@@ -159,9 +172,8 @@ public class PlaceOrderPanel extends javax.swing.JPanel {
         ));
         jScrollPane3.setViewportView(tblCart);
 
-        jLabel4.setText("Bill Total");
-
-        jLabel5.setText("jLabel5");
+        jLabel4.setFont(new java.awt.Font("Lucida Grande", 1, 12)); // NOI18N
+        jLabel4.setText("Bill Total :");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
@@ -182,41 +194,39 @@ public class PlaceOrderPanel extends javax.swing.JPanel {
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(jLabel4)
                         .addGap(31, 31, 31)
-                        .addComponent(jLabel5)
+                        .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 132, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(0, 0, Short.MAX_VALUE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(jLabel2)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(RestComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, 154, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jButton5)
-                        .addContainerGap(278, Short.MAX_VALUE))
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                             .addComponent(jScrollPane3, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
                             .addComponent(jScrollPane1, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 325, Short.MAX_VALUE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jLabel1)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(btnPlaceOrder)
                             .addComponent(btnAddtoCart)
                             .addComponent(jButton4))
-                        .addGap(21, 21, 21))))
+                        .addGap(21, 21, 21))
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(jLabel2)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(RestComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, 154, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel1)
+                            .addComponent(jButton5))
+                        .addContainerGap(224, Short.MAX_VALUE))))
         );
 
         layout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {btnAddtoCart, btnPlaceOrder, jButton4});
-
-        layout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {jLabel4, jLabel5});
 
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jButton1)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel1)
-                .addGap(37, 37, 37)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jButton1)
+                    .addComponent(jLabel1))
+                .addGap(59, 59, 59)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel2)
                     .addComponent(RestComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -237,8 +247,8 @@ public class PlaceOrderPanel extends javax.swing.JPanel {
                 .addGap(26, 26, 26)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel4)
-                    .addComponent(jLabel5))
-                .addContainerGap(36, Short.MAX_VALUE))
+                    .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 15, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(38, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 

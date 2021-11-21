@@ -66,8 +66,10 @@ public class ManageRestaurantPanel extends javax.swing.JPanel {
         lblManName = new javax.swing.JLabel();
         lblManUserId = new javax.swing.JLabel();
 
+        jLabel1.setFont(new java.awt.Font("Lucida Grande", 1, 18)); // NOI18N
         jLabel1.setText("Manage Restaurants");
 
+        jLabel2.setFont(new java.awt.Font("Lucida Grande", 1, 14)); // NOI18N
         jLabel2.setText("Restaurants");
 
         jTableRestaurant.setModel(new javax.swing.table.DefaultTableModel(
@@ -83,6 +85,8 @@ public class ManageRestaurantPanel extends javax.swing.JPanel {
         ));
         jScrollPane1.setViewportView(jTableRestaurant);
 
+        jButtonCreateRestaurant.setBackground(new java.awt.Color(204, 255, 204));
+        jButtonCreateRestaurant.setFont(new java.awt.Font("Lucida Grande", 1, 13)); // NOI18N
         jButtonCreateRestaurant.setText("Create Restaurant");
         jButtonCreateRestaurant.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -90,6 +94,8 @@ public class ManageRestaurantPanel extends javax.swing.JPanel {
             }
         });
 
+        jButtonDeleteRestaurant.setBackground(new java.awt.Color(204, 255, 204));
+        jButtonDeleteRestaurant.setFont(new java.awt.Font("Lucida Grande", 1, 13)); // NOI18N
         jButtonDeleteRestaurant.setText("Delete Restaurant");
         jButtonDeleteRestaurant.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -97,6 +103,8 @@ public class ManageRestaurantPanel extends javax.swing.JPanel {
             }
         });
 
+        jButtonBack.setBackground(new java.awt.Color(204, 255, 204));
+        jButtonBack.setFont(new java.awt.Font("Lucida Grande", 3, 13)); // NOI18N
         jButtonBack.setText("BACK");
         jButtonBack.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -104,8 +112,11 @@ public class ManageRestaurantPanel extends javax.swing.JPanel {
             }
         });
 
+        jLabel3.setFont(new java.awt.Font("Lucida Grande", 1, 13)); // NOI18N
         jLabel3.setText("Restaurant Name");
 
+        jButton1.setBackground(new java.awt.Color(204, 255, 204));
+        jButton1.setFont(new java.awt.Font("Lucida Grande", 1, 13)); // NOI18N
         jButton1.setText("Get Details");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -113,13 +124,11 @@ public class ManageRestaurantPanel extends javax.swing.JPanel {
             }
         });
 
+        jLabel4.setFont(new java.awt.Font("Lucida Grande", 1, 13)); // NOI18N
         jLabel4.setText("Manager Name");
 
+        jLabel5.setFont(new java.awt.Font("Lucida Grande", 1, 13)); // NOI18N
         jLabel5.setText("Manager User ID");
-
-        lblManName.setText("jLabel6");
-
-        lblManUserId.setText("jLabel7");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
@@ -143,24 +152,21 @@ public class ManageRestaurantPanel extends javax.swing.JPanel {
                                     .addComponent(jLabel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                     .addComponent(jLabel5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                                 .addGap(36, 36, 36)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(lblManUserId)
-                                    .addComponent(lblManName)
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addComponent(txtRestSearch, javax.swing.GroupLayout.PREFERRED_SIZE, 94, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addGap(18, 18, 18)
-                                        .addComponent(jButton1))))))
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                    .addComponent(lblManName, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(txtRestSearch, javax.swing.GroupLayout.DEFAULT_SIZE, 94, Short.MAX_VALUE)
+                                    .addComponent(lblManUserId, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                .addGap(18, 18, 18)
+                                .addComponent(jButton1))))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(40, 40, 40)
                         .addComponent(jButtonBack)
                         .addGap(145, 145, 145)
                         .addComponent(jLabel1)))
-                .addContainerGap(55, Short.MAX_VALUE))
+                .addContainerGap(44, Short.MAX_VALUE))
         );
 
         layout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {jLabel3, txtRestSearch});
-
-        layout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {lblManName, lblManUserId});
 
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -186,12 +192,12 @@ public class ManageRestaurantPanel extends javax.swing.JPanel {
                 .addGap(36, 36, 36)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel4)
-                    .addComponent(lblManName))
+                    .addComponent(lblManName, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(39, 39, 39)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel5)
-                    .addComponent(lblManUserId))
-                .addContainerGap(116, Short.MAX_VALUE))
+                    .addComponent(lblManUserId, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(114, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 

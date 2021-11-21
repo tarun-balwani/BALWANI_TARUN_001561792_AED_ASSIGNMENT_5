@@ -60,14 +60,20 @@ public class NewCustomerPanel extends javax.swing.JPanel {
         btnAddCust = new javax.swing.JButton();
         btnBack = new javax.swing.JButton();
 
+        jLabel1.setFont(new java.awt.Font("Lucida Grande", 1, 13)); // NOI18N
         jLabel1.setText("User ID");
 
+        jLabel2.setFont(new java.awt.Font("Lucida Grande", 1, 13)); // NOI18N
         jLabel2.setText("Name");
 
+        jLabel3.setFont(new java.awt.Font("Lucida Grande", 1, 13)); // NOI18N
         jLabel3.setText("Password");
 
+        jLabel4.setFont(new java.awt.Font("Lucida Grande", 1, 18)); // NOI18N
         jLabel4.setText("Customer Addition");
 
+        btnAddCust.setBackground(new java.awt.Color(204, 255, 204));
+        btnAddCust.setFont(new java.awt.Font("Lucida Grande", 1, 13)); // NOI18N
         btnAddCust.setText("Add User");
         btnAddCust.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -75,6 +81,8 @@ public class NewCustomerPanel extends javax.swing.JPanel {
             }
         });
 
+        btnBack.setBackground(new java.awt.Color(204, 255, 204));
+        btnBack.setFont(new java.awt.Font("Lucida Grande", 3, 13)); // NOI18N
         btnBack.setText("BACK");
         btnBack.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -107,7 +115,7 @@ public class NewCustomerPanel extends javax.swing.JPanel {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(btnBack)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 169, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 111, Short.MAX_VALUE)
                 .addComponent(jLabel4)
                 .addGap(229, 229, 229))
         );

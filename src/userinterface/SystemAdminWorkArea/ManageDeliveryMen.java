@@ -53,8 +53,10 @@ public class ManageDeliveryMen extends javax.swing.JPanel {
         btnAddDelMan = new javax.swing.JButton();
         btnBack = new javax.swing.JButton();
 
+        jLabel1.setFont(new java.awt.Font("Lucida Grande", 1, 18)); // NOI18N
         jLabel1.setText("Delivery Man Directory");
 
+        jLabel2.setFont(new java.awt.Font("Lucida Grande", 1, 13)); // NOI18N
         jLabel2.setText("Delivery Man Employee Data");
 
         tblDelMenList.setModel(new javax.swing.table.DefaultTableModel(
@@ -70,6 +72,8 @@ public class ManageDeliveryMen extends javax.swing.JPanel {
         ));
         jScrollPane1.setViewportView(tblDelMenList);
 
+        btnDelete.setBackground(new java.awt.Color(204, 255, 204));
+        btnDelete.setFont(new java.awt.Font("Lucida Grande", 1, 13)); // NOI18N
         btnDelete.setText("Delete");
         btnDelete.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -77,6 +81,8 @@ public class ManageDeliveryMen extends javax.swing.JPanel {
             }
         });
 
+        btnAddDelMan.setBackground(new java.awt.Color(204, 255, 204));
+        btnAddDelMan.setFont(new java.awt.Font("Lucida Grande", 1, 13)); // NOI18N
         btnAddDelMan.setText("Add New");
         btnAddDelMan.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -84,6 +90,8 @@ public class ManageDeliveryMen extends javax.swing.JPanel {
             }
         });
 
+        btnBack.setBackground(new java.awt.Color(204, 255, 204));
+        btnBack.setFont(new java.awt.Font("Lucida Grande", 3, 13)); // NOI18N
         btnBack.setText("BACK");
         btnBack.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {

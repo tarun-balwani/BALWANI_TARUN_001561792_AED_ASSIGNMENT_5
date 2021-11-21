@@ -50,8 +50,11 @@ public class ManagerCustomersPanel extends javax.swing.JPanel {
         jButton2 = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
 
+        jLabel1.setFont(new java.awt.Font("Lucida Grande", 1, 18)); // NOI18N
         jLabel1.setText("Customer Directory");
 
+        jButton1.setBackground(new java.awt.Color(204, 255, 204));
+        jButton1.setFont(new java.awt.Font("Lucida Grande", 3, 13)); // NOI18N
         jButton1.setText("BACK");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -72,6 +75,8 @@ public class ManagerCustomersPanel extends javax.swing.JPanel {
         ));
         jScrollPane1.setViewportView(tblCustList);
 
+        jButton2.setBackground(new java.awt.Color(204, 255, 204));
+        jButton2.setFont(new java.awt.Font("Lucida Grande", 1, 13)); // NOI18N
         jButton2.setText("Add New");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -79,6 +84,8 @@ public class ManagerCustomersPanel extends javax.swing.JPanel {
             }
         });
 
+        jButton3.setBackground(new java.awt.Color(204, 255, 204));
+        jButton3.setFont(new java.awt.Font("Lucida Grande", 1, 13)); // NOI18N
         jButton3.setText("Delete");
         jButton3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {

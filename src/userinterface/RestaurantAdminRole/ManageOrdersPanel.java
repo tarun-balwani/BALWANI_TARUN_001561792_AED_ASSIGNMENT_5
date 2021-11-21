@@ -41,6 +41,7 @@ public class ManageOrdersPanel extends javax.swing.JPanel {
         this.organization=organization;
         this.enterprise=enterprise;
         this.business=business;
+        btnAssignDelivery.setEnabled(false);
         populateTable();
         populateComboBox();
     }
@@ -69,8 +70,11 @@ public class ManageOrdersPanel extends javax.swing.JPanel {
         jLabel3 = new javax.swing.JLabel();
         deliveryManCombo = new javax.swing.JComboBox<>();
 
+        jLabel1.setFont(new java.awt.Font("Lucida Grande", 1, 14)); // NOI18N
         jLabel1.setText("Assigned Food Orders");
 
+        btnBack.setBackground(new java.awt.Color(204, 255, 204));
+        btnBack.setFont(new java.awt.Font("Lucida Grande", 1, 13)); // NOI18N
         btnBack.setText("BACK");
         btnBack.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -78,6 +82,8 @@ public class ManageOrdersPanel extends javax.swing.JPanel {
             }
         });
 
+        btnRefresh.setBackground(new java.awt.Color(204, 255, 204));
+        btnRefresh.setFont(new java.awt.Font("Lucida Grande", 1, 13)); // NOI18N
         btnRefresh.setText("Refresh Status");
         btnRefresh.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -98,6 +104,8 @@ public class ManageOrdersPanel extends javax.swing.JPanel {
         ));
         jScrollPane1.setViewportView(tblOrders);
 
+        btnReviewOrder.setBackground(new java.awt.Color(204, 255, 204));
+        btnReviewOrder.setFont(new java.awt.Font("Lucida Grande", 1, 13)); // NOI18N
         btnReviewOrder.setText("Review Order");
         btnReviewOrder.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -105,6 +113,8 @@ public class ManageOrdersPanel extends javax.swing.JPanel {
             }
         });
 
+        btnAcceptOrder.setBackground(new java.awt.Color(204, 255, 204));
+        btnAcceptOrder.setFont(new java.awt.Font("Lucida Grande", 1, 13)); // NOI18N
         btnAcceptOrder.setText("Accept Order");
         btnAcceptOrder.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -112,6 +122,8 @@ public class ManageOrdersPanel extends javax.swing.JPanel {
             }
         });
 
+        btnAssignDelivery.setBackground(new java.awt.Color(204, 255, 204));
+        btnAssignDelivery.setFont(new java.awt.Font("Lucida Grande", 1, 13)); // NOI18N
         btnAssignDelivery.setText("Assing Delivery");
         btnAssignDelivery.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -121,19 +133,21 @@ public class ManageOrdersPanel extends javax.swing.JPanel {
 
         tblRevieworder.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null}
+                {null, null},
+                {null, null},
+                {null, null},
+                {null, null}
             },
             new String [] {
-                "Title 1", "Title 2", "Title 3", "Title 4"
+                "Item", "Price"
             }
         ));
         jScrollPane2.setViewportView(tblRevieworder);
 
+        jLabel2.setFont(new java.awt.Font("Lucida Grande", 1, 14)); // NOI18N
         jLabel2.setText("Ordered Items:");
 
+        jLabel3.setFont(new java.awt.Font("Lucida Grande", 1, 14)); // NOI18N
         jLabel3.setText("Delivery Person:");
 
         deliveryManCombo.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
@@ -179,7 +193,7 @@ public class ManageOrdersPanel extends javax.swing.JPanel {
                                     .addGroup(layout.createSequentialGroup()
                                         .addGap(42, 42, 42)
                                         .addComponent(btnAssignDelivery)))))
-                        .addContainerGap(31, Short.MAX_VALUE))))
+                        .addContainerGap(23, Short.MAX_VALUE))))
         );
 
         layout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {btnBack, btnRefresh});
@@ -217,7 +231,7 @@ public class ManageOrdersPanel extends javax.swing.JPanel {
                             .addComponent(deliveryManCombo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(18, 18, 18)
                         .addComponent(btnAssignDelivery)))
-                .addContainerGap(126, Short.MAX_VALUE))
+                .addContainerGap(124, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
@@ -256,6 +270,7 @@ public class ManageOrdersPanel extends javax.swing.JPanel {
          order1.setStatus("Order Accepted");
          
             JOptionPane.showMessageDialog(null, "Order accepted successfully");
+            btnAssignDelivery.setEnabled(true);
     }//GEN-LAST:event_btnAcceptOrderActionPerformed
 
     private void btnRefreshActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRefreshActionPerformed

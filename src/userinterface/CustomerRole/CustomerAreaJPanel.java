@@ -66,8 +66,11 @@ public class CustomerAreaJPanel extends javax.swing.JPanel {
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
 
+        jLabel1.setFont(new java.awt.Font("Lucida Grande", 1, 18)); // NOI18N
         jLabel1.setText("Order Food and Past Order Details");
 
+        jButton1.setBackground(new java.awt.Color(204, 255, 204));
+        jButton1.setFont(new java.awt.Font("Lucida Grande", 1, 13)); // NOI18N
         jButton1.setText("Order Food");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -75,6 +78,8 @@ public class CustomerAreaJPanel extends javax.swing.JPanel {
             }
         });
 
+        jButton2.setBackground(new java.awt.Color(204, 255, 204));
+        jButton2.setFont(new java.awt.Font("Lucida Grande", 1, 13)); // NOI18N
         jButton2.setText("Order History");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -96,7 +101,7 @@ public class CustomerAreaJPanel extends javax.swing.JPanel {
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addComponent(jButton2)
                             .addComponent(jButton1))))
-                .addContainerGap(181, Short.MAX_VALUE))
+                .addContainerGap(74, Short.MAX_VALUE))
         );
 
         layout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {jButton1, jButton2});

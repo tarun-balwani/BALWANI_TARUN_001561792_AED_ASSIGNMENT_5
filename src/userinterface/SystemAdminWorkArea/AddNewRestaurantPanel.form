@@ -11,6 +11,7 @@
     <AuxValue name="FormSettings_listenerGenerationStyle" type="java.lang.Integer" value="0"/>
     <AuxValue name="FormSettings_variablesLocal" type="java.lang.Boolean" value="false"/>
     <AuxValue name="FormSettings_variablesModifier" type="java.lang.Integer" value="2"/>
+    <AuxValue name="designerSize" type="java.awt.Dimension" value="-84,-19,0,5,115,114,0,18,106,97,118,97,46,97,119,116,46,68,105,109,101,110,115,105,111,110,65,-114,-39,-41,-84,95,68,20,2,0,2,73,0,6,104,101,105,103,104,116,73,0,5,119,105,100,116,104,120,112,0,0,2,83,0,0,2,27"/>
   </AuxValues>
 
   <Layout>
@@ -21,25 +22,11 @@
                   <Group type="102" attributes="0">
                       <EmptySpace min="-2" pref="24" max="-2" attributes="0"/>
                       <Component id="jButtonBack" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace min="-2" pref="248" max="-2" attributes="0"/>
-                      <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace min="-2" pref="58" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Group type="102" alignment="0" attributes="0">
-                              <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="jLabel2" linkSize="1" alignment="0" min="-2" max="-2" attributes="0"/>
-                                  <Component id="jLabel3" linkSize="1" alignment="0" min="-2" max="-2" attributes="0"/>
-                                  <Component id="jButtonAddRestaurant" linkSize="2" alignment="0" min="-2" max="-2" attributes="0"/>
-                              </Group>
-                              <EmptySpace min="-2" pref="32" max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                  <Component id="txtRestLoc" max="32767" attributes="0"/>
-                                  <Component id="txtRestName" max="32767" attributes="0"/>
-                                  <Component id="jButtonAssignManager" linkSize="2" min="-2" max="-2" attributes="0"/>
-                              </Group>
-                          </Group>
+                          <Component id="jButtonAssignManager" linkSize="2" alignment="0" min="-2" max="-2" attributes="0"/>
                           <Group type="102" alignment="0" attributes="0">
                               <Component id="jLabel4" linkSize="3" min="-2" max="-2" attributes="0"/>
                               <EmptySpace type="separate" max="-2" attributes="0"/>
@@ -55,20 +42,37 @@
                               <EmptySpace type="separate" max="-2" attributes="0"/>
                               <Component id="txtManPwd" linkSize="4" min="-2" max="-2" attributes="0"/>
                           </Group>
+                          <Component id="jLabel7" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Group type="103" alignment="0" groupAlignment="1" attributes="0">
+                              <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
+                              <Group type="102" attributes="0">
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Component id="jLabel2" linkSize="1" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jLabel3" linkSize="1" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jButtonAddRestaurant" linkSize="2" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace min="-2" pref="32" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                      <Component id="txtRestLoc" pref="140" max="32767" attributes="0"/>
+                                      <Component id="txtRestName" max="32767" attributes="0"/>
+                                  </Group>
+                              </Group>
+                          </Group>
                       </Group>
                   </Group>
               </Group>
-              <EmptySpace pref="311" max="32767" attributes="0"/>
+              <EmptySpace pref="159" max="32767" attributes="0"/>
           </Group>
+          <Component id="jSeparator1" alignment="1" max="32767" attributes="0"/>
       </Group>
     </DimensionLayout>
     <DimensionLayout dim="1">
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" alignment="0" attributes="0">
               <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
-                  <Component id="jButtonBack" min="-2" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="jButtonBack" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="jLabel1" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace min="-2" pref="69" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
@@ -81,11 +85,12 @@
                   <Component id="txtRestLoc" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace type="separate" max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="jButtonAddRestaurant" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="jButtonAssignManager" alignment="3" min="-2" max="-2" attributes="0"/>
-              </Group>
-              <EmptySpace min="-2" pref="100" max="-2" attributes="0"/>
+              <Component id="jButtonAddRestaurant" min="-2" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="36" max="-2" attributes="0"/>
+              <Component id="jSeparator1" min="-2" max="-2" attributes="0"/>
+              <EmptySpace type="separate" max="-2" attributes="0"/>
+              <Component id="jLabel7" min="-2" max="-2" attributes="0"/>
+              <EmptySpace type="separate" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="jLabel4" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="txtManName" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -100,7 +105,9 @@
                   <Component id="jLabel6" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="txtManPwd" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
-              <EmptySpace pref="140" max="32767" attributes="0"/>
+              <EmptySpace min="-2" pref="29" max="-2" attributes="0"/>
+              <Component id="jButtonAssignManager" min="-2" max="-2" attributes="0"/>
+              <EmptySpace pref="81" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -108,16 +115,25 @@
   <SubComponents>
     <Component class="javax.swing.JLabel" name="jLabel1">
       <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Lucida Grande" size="18" style="1"/>
+        </Property>
         <Property name="text" type="java.lang.String" value="Add A New Restaurant"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel2">
       <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Lucida Grande" size="12" style="1"/>
+        </Property>
         <Property name="text" type="java.lang.String" value="Restaurant Name:"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel3">
       <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Lucida Grande" size="12" style="1"/>
+        </Property>
         <Property name="text" type="java.lang.String" value="Location:"/>
       </Properties>
     </Component>
@@ -127,6 +143,12 @@
     </Component>
     <Component class="javax.swing.JButton" name="jButtonAddRestaurant">
       <Properties>
+        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="cc" green="ff" red="cc" type="rgb"/>
+        </Property>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Lucida Grande" size="13" style="1"/>
+        </Property>
         <Property name="text" type="java.lang.String" value="Add Restaurant"/>
       </Properties>
       <Events>
@@ -135,6 +157,12 @@
     </Component>
     <Component class="javax.swing.JButton" name="jButtonAssignManager">
       <Properties>
+        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="cc" green="ff" red="cc" type="rgb"/>
+        </Property>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Lucida Grande" size="13" style="1"/>
+        </Property>
         <Property name="text" type="java.lang.String" value="Add Manager"/>
       </Properties>
       <Events>
@@ -143,16 +171,25 @@
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel4">
       <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Lucida Grande" size="12" style="1"/>
+        </Property>
         <Property name="text" type="java.lang.String" value="Manager&apos;s Name"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel5">
       <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Lucida Grande" size="12" style="1"/>
+        </Property>
         <Property name="text" type="java.lang.String" value="User ID"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel6">
       <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Lucida Grande" size="12" style="1"/>
+        </Property>
         <Property name="text" type="java.lang.String" value="Password"/>
       </Properties>
     </Component>
@@ -164,11 +201,27 @@
     </Component>
     <Component class="javax.swing.JButton" name="jButtonBack">
       <Properties>
+        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="cc" green="ff" red="cc" type="rgb"/>
+        </Property>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Lucida Grande" size="13" style="3"/>
+        </Property>
         <Property name="text" type="java.lang.String" value="BACK"/>
       </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButtonBackActionPerformed"/>
       </Events>
+    </Component>
+    <Component class="javax.swing.JLabel" name="jLabel7">
+      <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Lucida Grande" size="14" style="1"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="Add manager Details:"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JSeparator" name="jSeparator1">
     </Component>
   </SubComponents>
 </Form>

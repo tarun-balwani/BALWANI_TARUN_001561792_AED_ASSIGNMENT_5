@@ -59,12 +59,17 @@ public class ManageMenuPanel extends javax.swing.JPanel {
         jLabel4 = new javax.swing.JLabel();
         btnBack = new javax.swing.JButton();
 
+        jLabel1.setFont(new java.awt.Font("Lucida Grande", 1, 18)); // NOI18N
         jLabel1.setText("Add Items to Menu");
 
+        jLabel2.setFont(new java.awt.Font("Lucida Grande", 1, 13)); // NOI18N
         jLabel2.setText("Item Name");
 
+        jLabel3.setFont(new java.awt.Font("Lucida Grande", 1, 13)); // NOI18N
         jLabel3.setText("Price");
 
+        btnAddInMenu.setBackground(new java.awt.Color(204, 255, 204));
+        btnAddInMenu.setFont(new java.awt.Font("Lucida Grande", 1, 13)); // NOI18N
         btnAddInMenu.setText("Add Item ");
         btnAddInMenu.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -85,6 +90,8 @@ public class ManageMenuPanel extends javax.swing.JPanel {
         ));
         jScrollPane1.setViewportView(tblFoodItemList);
 
+        jButton1.setBackground(new java.awt.Color(204, 255, 204));
+        jButton1.setFont(new java.awt.Font("Lucida Grande", 1, 13)); // NOI18N
         jButton1.setText("Delete");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -92,8 +99,11 @@ public class ManageMenuPanel extends javax.swing.JPanel {
             }
         });
 
+        jLabel4.setFont(new java.awt.Font("Lucida Grande", 1, 13)); // NOI18N
         jLabel4.setText("Food Menu");
 
+        btnBack.setBackground(new java.awt.Color(204, 255, 204));
+        btnBack.setFont(new java.awt.Font("Lucida Grande", 3, 13)); // NOI18N
         btnBack.setText("BACK");
         btnBack.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -131,7 +141,7 @@ public class ManageMenuPanel extends javax.swing.JPanel {
                     .addGroup(layout.createSequentialGroup()
                         .addContainerGap()
                         .addComponent(btnBack)))
-                .addContainerGap(377, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         layout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {txtItemName, txtItemPrice});
@@ -151,13 +161,13 @@ public class ManageMenuPanel extends javax.swing.JPanel {
                     .addComponent(txtItemPrice, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(27, 27, 27)
                 .addComponent(btnAddInMenu)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 137, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jLabel4)
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 141, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jButton1))
-                .addGap(132, 132, 132))
+                .addGap(40, 40, 40))
         );
     }// </editor-fold>//GEN-END:initComponents
 

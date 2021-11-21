@@ -63,14 +63,20 @@ public class NewDeliveryManPanel extends javax.swing.JPanel {
         btnAddDeliveryMan = new javax.swing.JButton();
         btnBack = new javax.swing.JButton();
 
+        jLabel1.setFont(new java.awt.Font("Lucida Grande", 1, 18)); // NOI18N
         jLabel1.setText("Add New Delivery Man");
 
+        jLabel2.setFont(new java.awt.Font("Lucida Grande", 1, 13)); // NOI18N
         jLabel2.setText("Name");
 
+        jLabel3.setFont(new java.awt.Font("Lucida Grande", 1, 13)); // NOI18N
         jLabel3.setText("User ID");
 
+        jLabel4.setFont(new java.awt.Font("Lucida Grande", 1, 13)); // NOI18N
         jLabel4.setText("Password");
 
+        btnAddDeliveryMan.setBackground(new java.awt.Color(204, 255, 204));
+        btnAddDeliveryMan.setFont(new java.awt.Font("Lucida Grande", 1, 13)); // NOI18N
         btnAddDeliveryMan.setText("Add Delivery Man");
         btnAddDeliveryMan.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -78,6 +84,8 @@ public class NewDeliveryManPanel extends javax.swing.JPanel {
             }
         });
 
+        btnBack.setBackground(new java.awt.Color(204, 255, 204));
+        btnBack.setFont(new java.awt.Font("Lucida Grande", 1, 13)); // NOI18N
         btnBack.setText("BACK");
         btnBack.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -111,7 +119,7 @@ public class NewDeliveryManPanel extends javax.swing.JPanel {
                         .addComponent(btnBack)
                         .addGap(105, 105, 105)
                         .addComponent(jLabel1)))
-                .addContainerGap(255, Short.MAX_VALUE))
+                .addContainerGap(181, Short.MAX_VALUE))
         );
 
         layout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {jLabel2, jLabel3, jLabel4});
