@@ -31,7 +31,7 @@ public class SystemAdminWorkAreaJPanel extends javax.swing.JPanel {
         initComponents();
         this.userProcessContainer=userProcessContainer;
         this.ecosystem=ecosystem;
-        Organization delivOrg= (Organization)this.ecosystem.getDeliveryManDirectory().searchOrganization("DeliveryMan");
+        Organization delivOrg= (Organization)this.ecosystem.getDeliveryManDirectory().searchOrganization("Delivery");
        
        Organization custOrg= (Organization)this.ecosystem.getCustomerDirectory().searchOrganization("Customer");
        

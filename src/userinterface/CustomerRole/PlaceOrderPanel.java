@@ -258,7 +258,7 @@ public class PlaceOrderPanel extends javax.swing.JPanel {
         if (order.getItemsList().isEmpty() == false){
         Enterprise selectedItem = (Enterprise) RestComboBox.getSelectedItem();
         order.setRestaurantName(selectedItem.getName());
-        order.setStatus("order placed and confirmed");
+        order.setStatus("order placed");
    //     order.setCustomerNotes(customerNotesTxt.getText());
         order.setCustomerUserName(userAccount.getUsername());
         order.setCustomerName(userAccount.getEmployee().getName());
