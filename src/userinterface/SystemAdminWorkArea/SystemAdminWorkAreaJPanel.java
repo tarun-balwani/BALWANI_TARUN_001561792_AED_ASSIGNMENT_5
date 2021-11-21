@@ -6,8 +6,10 @@
 package userinterface.SystemAdminWorkArea;
 
 import Business.EcoSystem;
+import Business.Enterprise.Enterprise;
 
 import Business.Organization;
+import Business.UserAccount.UserAccount;
 import java.awt.CardLayout;
 import java.util.ArrayList;
 import javax.swing.JPanel;
@@ -54,6 +56,93 @@ public class SystemAdminWorkAreaJPanel extends javax.swing.JPanel {
         DefaultTreeModel model=(DefaultTreeModel)jTree.getModel();
        // Add the code for draw your system structure shown by JTree
        
+        ArrayList<Enterprise> enterpriseList;
+        ArrayList<Organization> organizationList;
+        ArrayList<UserAccount> userAccountList;
+        ArrayList<Organization> custOrganizationList;
+        ArrayList<UserAccount> customersAccountList;
+        ArrayList<Organization> delOrganizationList;
+        ArrayList<UserAccount> deliveryMenUserAccountList;
+        Enterprise enterprise;
+        Organization organization;
+        UserAccount userAccount;
+        Organization organization1;
+        UserAccount custUserAccount;
+        Organization organization2;
+        UserAccount delivUserAccount;
+       
+        DefaultMutableTreeNode enterprises = new DefaultMutableTreeNode("Restaurants");
+        DefaultMutableTreeNode customerOrg2 = new DefaultMutableTreeNode("Customers");
+        DefaultMutableTreeNode deliveryOrg2 = new DefaultMutableTreeNode("Delivery Men");
+        DefaultMutableTreeNode root = (DefaultMutableTreeNode) model.getRoot();
+        root.removeAllChildren();
+        root.insert(enterprises, 0);
+        root.insert(customerOrg2,1);
+        root.insert(deliveryOrg2, 2);
+        
+        DefaultMutableTreeNode enterpriseNode;
+        DefaultMutableTreeNode organizationNode;
+        DefaultMutableTreeNode userAccountNode;
+        DefaultMutableTreeNode custOrganizationNode;
+        DefaultMutableTreeNode CustomersNode;
+        DefaultMutableTreeNode delivOrganizationNode;
+        DefaultMutableTreeNode DeliveryMenNode;
+        
+        enterpriseList = ecosystem.getEnterpriseDirectory().getEnterpriseList();
+            for (int j = 0; j < enterpriseList.size(); j++) {
+                enterprise = enterpriseList.get(j);
+                enterpriseNode = new DefaultMutableTreeNode(enterprise.getName());
+                enterprises.insert(enterpriseNode, j);
+
+                organizationList = enterprise.getRestaurantDirectory().getOrganizationList();
+                
+                for (int k = 0; k < organizationList.size(); k++) {
+                    organization = organizationList.get(k);
+                    organizationNode = new DefaultMutableTreeNode(organization.getName());
+                    enterpriseNode.insert(organizationNode, k);
+                    
+                   userAccountList=organization.getUserAccountDirectory().getUserAccountList();
+                 
+                   for (int l = 0; l < userAccountList.size(); l++) {
+                    userAccount = userAccountList.get(l);
+                    userAccountNode = new DefaultMutableTreeNode(userAccount.getUsername());
+                    organizationNode.insert(userAccountNode, l);
+                   }
+                }
+            }
+            
+            custOrganizationList = ecosystem.getCustomerDirectory().getOrganizationList();
+                
+                for (int k = 0; k < custOrganizationList.size(); k++) {
+                    organization1 = custOrganizationList.get(k);
+                    custOrganizationNode = new DefaultMutableTreeNode(organization1.getName());
+                    customerOrg2.insert(custOrganizationNode, k);
+                    
+                   customersAccountList=organization1.getUserAccountDirectory().getUserAccountList();
+                 
+                   for (int l = 0; l < customersAccountList.size(); l++) {
+                    custUserAccount = customersAccountList.get(l);
+                    CustomersNode = new DefaultMutableTreeNode(custUserAccount.getUsername());
+                    custOrganizationNode.insert(CustomersNode, l);
+                   }
+                }
+                
+                delOrganizationList = ecosystem.getDeliveryManDirectory().getOrganizationList();
+                
+                for (int k = 0; k < delOrganizationList.size(); k++) {
+                    organization2 = delOrganizationList.get(k);
+                    delivOrganizationNode = new DefaultMutableTreeNode(organization2.getName());
+                    deliveryOrg2.insert(delivOrganizationNode, k);
+                    
+                   deliveryMenUserAccountList=organization2.getUserAccountDirectory().getUserAccountList();
+                 
+                   for (int l = 0; l < deliveryMenUserAccountList.size(); l++) {
+                    delivUserAccount = deliveryMenUserAccountList.get(l);
+                    DeliveryMenNode = new DefaultMutableTreeNode(delivUserAccount.getUsername());
+                    delivOrganizationNode.insert(DeliveryMenNode, l);
+                   }
+                }
+        
         model.reload();
     }
     /**
