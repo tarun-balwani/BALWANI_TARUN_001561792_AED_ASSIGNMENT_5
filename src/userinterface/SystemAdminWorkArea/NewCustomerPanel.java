@@ -115,7 +115,7 @@ public class NewCustomerPanel extends javax.swing.JPanel {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(btnBack)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 111, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 261, Short.MAX_VALUE)
                 .addComponent(jLabel4)
                 .addGap(229, 229, 229))
         );
@@ -145,7 +145,7 @@ public class NewCustomerPanel extends javax.swing.JPanel {
                     .addComponent(txtCustPwd, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(36, 36, 36)
                 .addComponent(btnAddCust)
-                .addContainerGap(235, Short.MAX_VALUE))
+                .addContainerGap(185, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
@@ -160,7 +160,7 @@ public class NewCustomerPanel extends javax.swing.JPanel {
         if (usernamePatternCorrect()==false){
     
     txtCustId.setBorder(BorderFactory.createLineBorder(Color.RED));
-    JOptionPane.showMessageDialog(null, "Username should be in the format of xx_xx@xx.xx");
+    JOptionPane.showMessageDialog(null, "Username should be in the format of xxxx@xx.xx");
     return;
 } else{
     
@@ -209,8 +209,8 @@ Employee employee=organization.getEmployeeDirectory().createEmployee(txtCustName
     // End of variables declaration//GEN-END:variables
 
     private boolean usernamePatternCorrect() {
-        Pattern p=Pattern.compile("^[a-zA-Z0-9]+_[a-zA-Z0-9]+@[a-zA-Z0-9]+.[a-zA-Z0-9]+$");
-        Matcher m=p.matcher(txtCustName.getText());
+        Pattern p=Pattern.compile("^[a-zA-Z0-9]+[a-zA-Z0-9]+@[a-zA-Z0-9]+.[a-zA-Z0-9]+$");
+        Matcher m=p.matcher(txtCustId.getText());
         boolean b=m.matches();
         return b;
     }

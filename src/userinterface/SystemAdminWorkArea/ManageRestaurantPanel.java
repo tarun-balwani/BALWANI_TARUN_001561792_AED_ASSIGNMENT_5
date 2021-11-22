@@ -74,13 +74,13 @@ public class ManageRestaurantPanel extends javax.swing.JPanel {
 
         jTableRestaurant.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null}
+                {null, null},
+                {null, null},
+                {null, null},
+                {null, null}
             },
             new String [] {
-                "Name", "Address", "XYZ"
+                "Name", "Address"
             }
         ));
         jScrollPane1.setViewportView(jTableRestaurant);

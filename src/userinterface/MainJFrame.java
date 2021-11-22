@@ -80,7 +80,7 @@ public class MainJFrame extends javax.swing.JFrame {
         });
 
         jButtonCustomerSignUp.setBackground(new java.awt.Color(204, 255, 204));
-        jButtonCustomerSignUp.setText("Add Customer");
+        jButtonCustomerSignUp.setText("Sign Up");
         jButtonCustomerSignUp.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButtonCustomerSignUpActionPerformed(evt);
@@ -103,7 +103,7 @@ public class MainJFrame extends javax.swing.JFrame {
                         .addComponent(loginJLabel))
                     .addComponent(loginJButton, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(passwordField, javax.swing.GroupLayout.DEFAULT_SIZE, 118, Short.MAX_VALUE)
-                    .addComponent(jButtonCustomerSignUp, javax.swing.GroupLayout.PREFERRED_SIZE, 107, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jButtonCustomerSignUp))
                 .addContainerGap(44, Short.MAX_VALUE))
         );
 

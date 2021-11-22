@@ -99,7 +99,7 @@ public class ManageOrdersPanel extends javax.swing.JPanel {
                 {null, null, null}
             },
             new String [] {
-                "Order No", "Customer ID", "Status"
+                "Order No", "Customer", "Status"
             }
         ));
         jScrollPane1.setViewportView(tblOrders);
@@ -343,7 +343,7 @@ public class ManageOrdersPanel extends javax.swing.JPanel {
    if(order.getRestaurantName()!=null && order.getRestaurantName().equals(enterprise.getName())){
             Object row[] = new Object[3];
             row[0] = order;
-            row[1] = order.getCustomerId();
+            row[1] = order.getCustomerName();
             row[2] = order.getStatus();
             dtm.addRow(row);
         }

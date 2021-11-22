@@ -159,7 +159,7 @@ public class AddNewRestaurantPanel extends javax.swing.JPanel {
                                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                         .addComponent(txtRestLoc, javax.swing.GroupLayout.DEFAULT_SIZE, 140, Short.MAX_VALUE)
                                         .addComponent(txtRestName)))))))
-                .addContainerGap(159, Short.MAX_VALUE))
+                .addContainerGap(370, Short.MAX_VALUE))
             .addComponent(jSeparator1, javax.swing.GroupLayout.Alignment.TRAILING)
         );
 
@@ -206,7 +206,7 @@ public class AddNewRestaurantPanel extends javax.swing.JPanel {
                     .addComponent(txtManPwd, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(29, 29, 29)
                 .addComponent(jButtonAssignManager)
-                .addContainerGap(81, Short.MAX_VALUE))
+                .addContainerGap(36, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
@@ -242,7 +242,7 @@ public class AddNewRestaurantPanel extends javax.swing.JPanel {
         
         if (usernamePatternCorrect()==false){
     txtManUserId.setBorder(BorderFactory.createLineBorder(Color.RED));
-    JOptionPane.showMessageDialog(null, "Username should be in the format of xx_xx@xx.xx");
+    JOptionPane.showMessageDialog(null, "Username should be in the format of xxxx@xx.xx");
     return;
 } else{
     

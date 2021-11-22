@@ -119,7 +119,7 @@ public class NewDeliveryManPanel extends javax.swing.JPanel {
                         .addComponent(btnBack)
                         .addGap(105, 105, 105)
                         .addComponent(jLabel1)))
-                .addContainerGap(181, Short.MAX_VALUE))
+                .addContainerGap(331, Short.MAX_VALUE))
         );
 
         layout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {jLabel2, jLabel3, jLabel4});
@@ -147,7 +147,7 @@ public class NewDeliveryManPanel extends javax.swing.JPanel {
                     .addComponent(txtDelManPwd, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addComponent(btnAddDeliveryMan)
-                .addContainerGap(264, Short.MAX_VALUE))
+                .addContainerGap(214, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
@@ -162,7 +162,7 @@ public class NewDeliveryManPanel extends javax.swing.JPanel {
         
         if (usernamePatternCorrect()==false){
     
-    JOptionPane.showMessageDialog(null, "Username should be in the format of xx_xx@xx.xx");
+    JOptionPane.showMessageDialog(null, "Username should be in the format of xxxx@xx.xx");
     return;
 } else{
     
