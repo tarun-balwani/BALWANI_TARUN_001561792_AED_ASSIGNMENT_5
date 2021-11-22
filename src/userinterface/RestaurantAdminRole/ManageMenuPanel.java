@@ -173,13 +173,13 @@ public class ManageMenuPanel extends javax.swing.JPanel {
 
     private void btnAddInMenuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAddInMenuActionPerformed
         // TODO add your handling code here:
-        for(Items item:enterprise.getItemsList()) {
-            if(txtItemName.getText().equals(item.getItemName())){
-                
-        JOptionPane.showMessageDialog(null, "Item already exists");
-        return;
-            } 
-        }
+//        for(Items item:enterprise.getItemsList()) {
+//            if(txtItemName.getText().equals(item.getItemName())){
+//                
+//        JOptionPane.showMessageDialog(null, "Item already exists");
+//        return;
+//            } 
+//        }
         if(txtItemName.getText().equals("")||txtItemName.getText()==null){
               JOptionPane.showMessageDialog(null, "Item can't be empty");
         return;
